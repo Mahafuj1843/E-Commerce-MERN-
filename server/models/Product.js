@@ -38,18 +38,27 @@ const ProductSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
-    image:[String],
+    image:[
+        {
+            url: String,
+            publicId: String
+        }
+    ],
     color:{
         type: String,
         colors: ["Black", "White", "Red", "Blue", "Navy Blue", "Green", "Brown", "Ash", "Pink"]
     },
     rating: [
-        { ratings: Number, 
+        { star: Number, 
           review: String,  
           postedBy: {type: mongoose.Schema.Types.ObjectId, ref: "User" },
           date: {type: Date}
         }
     ],
+    totalrating: {
+        type: String,
+        default: 0
+    }
   },{timestamps: true}
   );
 

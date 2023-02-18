@@ -7,6 +7,7 @@ import usersRouter from './routes/usersRoute.js'
 import productsRouter from './routes/productsRoute.js'
 import categorysRoute from './routes/categorysRoute.js'
 import brandsRoute from './routes/brandsRoute.js'
+import couponsRoute from './routes/couponsRoute.js'
 
 const app = express()
 dotenv.config()
@@ -19,6 +20,7 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 app.use('/categorys', categorysRoute);
 app.use('/brands', brandsRoute);
+app.use('/coupons', couponsRoute);
 
 app.use((err, req, res, next)=>{
     const errorStatus = err.status || 500

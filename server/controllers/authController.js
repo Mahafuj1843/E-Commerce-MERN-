@@ -142,7 +142,7 @@ export const resetPassword = async (req, res, next) => {
                 "tokens.token" : hashedToken,
                 "tokens.expiresAt" : { $gt: Date.now() },
             });
-            console.log(hashedToken)
+            //console.log(hashedToken)
             if (!userToken)
                 return next(createError(404, "Invalid or Expired Token."));
             else {

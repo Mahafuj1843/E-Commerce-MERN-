@@ -39,10 +39,14 @@ const UserSchema = new mongoose.Schema({
         createdAt: {type:Date},
         expiresAt: {type:Date}
     },
-    cart:{
-        type: Array,
-        default: []
-    },
+    cart:[{  
+        productId: {type: mongoose.Schema.Types.ObjectId, ref: "Product" },
+        quantity: {
+            type: Number,
+            default: 1
+        },
+        price: Number,
+    }],
     address:[{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Address",
