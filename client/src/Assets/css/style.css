@@ -12,6 +12,9 @@
 body{
     font-family: 'Rubik', sans-serif;
 }
+h1,h2,h3,h4,h5,h6{
+    margin: 0;
+}
 a{
     text-decoration: none;
     display: inline-block;
@@ -25,6 +28,16 @@ p{
 }
 .gap-10{
     gap: 10px;
+}
+.button{
+    background-color: var(--header-bottom);
+    padding: 13px 18px;
+    color: white;
+    font-size: 14px;
+    border-radius: 25px;
+}
+.button:hover{
+    background-color: var(--header-bg);
 }
 
 /* Header */
@@ -65,6 +78,31 @@ footer .input-group-text{
     background-color: var(--header-bottom);
     cursor: pointer;
     color: white;
+}
+
+/* Home/Banner.js */
+.left-banner-1-text,
+.right-banner-1-text{
+    top: 15%;
+    left: 10%;
+}
+.right-banner{
+    width: 50%;
+}
+.right-banner-1-text h4{
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 24px; 
+}
+.right-banner-1-text h3{
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 34px; 
+}
+.right-banner-1-text p{
+    font-size: 10px;
+    line-height: 22px; 
+    font-weight: 500;
 }
 
 
